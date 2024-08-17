@@ -1,4 +1,5 @@
-# 
+# -*- coding: utf-8 -*-
+
 # 4 Layers
 class SimpleCNN(nn.Module):
     def __init__(self):
@@ -41,3 +42,31 @@ class SimpleCNN(nn.Module):
         x = self.global_pool(x)
 
         return x
+
+
+# Classifier
+class testModel(nn.Module):
+    def __init__(self, n_classes):
+        super(testModel, self).__init__()
+        self.feat_extractor = SimpleCNN()
+        self.classifier = nn.Linear(128, n_classes)
+
+        self.init_weight()
+
+    def init_weight(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode="fan_out")
+            if isinstance(m, nn.BatchNorm2d):
+                nn.init.ones_(m.weight)
+                nn.init.zeros_(m.bias)
+            if isinstance(m, nn.MaxPool2d):
+                nn.init.zeros_(m.weight)
+                nn.init.zeros_(m.bias)
+
+    def forward(self, x):
+        feat = self.feat_extractor(x)
+        feat = torch.flatten(feat, 1)
+        output = self.classifier(feat)
+
+        return output

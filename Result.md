@@ -9,7 +9,9 @@
    - SimpleCNN
      - 4 Layers (Convolution - BatchNorm - ReLU - MaxPool - AvgPool)
      - Convolution
-       - Initial in_channels: 3
-       - Final out_channels: 128
+       - initial in_channels: 3
+       - final out_channels: 128
        - kernel size: 3 $\times$ 3
-       - stride: 
+       - stride: 2
+       - padding: 2
+      

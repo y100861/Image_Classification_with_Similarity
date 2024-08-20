@@ -14,4 +14,6 @@
       - stride: 2
       - padding: 2
    - MaxPool
-      - kernel size:  
+      - kernel size: 2 $\times$ 2
+      - stride: 2
+      - padding: 0

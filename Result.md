@@ -5,13 +5,13 @@
    - Data augmentation (Resize(112 $\times$ 112), Horizontal Flip, Color Jitter, Normalize)
      
 
-# 02. Model
-   - SimpleCNN
-     - 4 Layers (Convolution - BatchNorm - ReLU - MaxPool - AvgPool)
-     - Convolution
-       - initial in_channels: 3
-       - final out_channels: 128
-       - kernel size: 3 $\times$ 3
-       - stride: 2
-       - padding: 2
-      
+# 02. Model (SimpleCNN)
+   - 4 Layers (Convolution - BatchNorm - ReLU - MaxPool - AvgPool)
+   - Convolution
+      - initial in_channels: 3
+      - final out_channels: 128
+      - kernel size: 3 $\times$ 3
+      - stride: 2
+      - padding: 2
+   - MaxPool
+      - kernel size:  

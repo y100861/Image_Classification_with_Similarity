@@ -81,7 +81,7 @@ class celebADataset(torch.utils.data.Dataset):
 
 
 # Load Data
-# Data Link: https://drive.google.com/drive/folders/1_k6e2HEs7Y5BKM2S2t1gkkSUWTQ-YUj8?usp=drive_link
+# Data Link: https://drive.google.com/file/d/1e3aE2K8KanNX8GR3zLWanyrv2xLVsXXa/view?usp=sharing
 base_dir = "Celebrity Faces Dataset"
 split_path = "split.txt"
 

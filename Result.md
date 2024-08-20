@@ -2,7 +2,7 @@
    - Celebrity Faces Dataset
    - 17 people 100 images of each person (images of Scarlett Johansson are 200)
    - All 1800 images (train: 1260, validation: 360, test: 180)
-   - Data augmentation (Resize(112 $/times$ 112), Horizontal Flip, Color Jitter, Normalize)
+   - Data augmentation (Resize(112 $\times$ 112), Horizontal Flip, Color Jitter, Normalize)
      
 
 # 02. Model

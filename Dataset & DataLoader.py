@@ -79,3 +79,14 @@ class celebADataset(torch.utils.data.Dataset):
     def __len__(self):
         return len(self.data)
 
+
+# Load Data
+# Data Link: https://drive.google.com/drive/folders/1_k6e2HEs7Y5BKM2S2t1gkkSUWTQ-YUj8?usp=drive_link
+base_dir = "Celebrity Faces Dataset"
+split_path = "split.txt"
+
+train_data = celebADataset(base_dir, split_path, transform=data_transforms["train"], mode="train")
+val_data = celebADataset(base_dir, split_path, transform=data_transforms["val"], mode="val")
+
+trainloader = DataLoader(train_data, batch_size=64, shuffle=True, pin_memory=True)
+valloader = DataLoader(val_data, batch_size=12, shuffle=False, pin_memory=True)

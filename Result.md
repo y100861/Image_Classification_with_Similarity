@@ -35,4 +35,12 @@
    - Train Loss decreased rapidly, and Train Accuracy increased rapidly too.
    - Initially, Validation Loss decreased rapidly, and Validation Accuracy increased rapidly.
       - But at some point, performance of model with validation data was stagnant. (best accuracy: 0.54~)
-   - it was "Overfitting".
+   - It was "Overfitting".
+
+
+# 05. Measuring Similarity
+   - Made gallery and query to measure similarity
+   - Used "IndexFlatL2" of Faiss.
+   - Showed quite a high value of distances
+   - Accuracy score with similarity 0.47~
+   - It showed Overfitting too.

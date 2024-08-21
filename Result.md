@@ -8,7 +8,7 @@
      
 
 # 02. Model (SimpleCNN)
-   - 4 Layers (Convolution - BatchNorm - ReLU - MaxPool - AvgPool)
+   - 5 Layers (Convolution - BatchNorm - ReLU - MaxPool - AvgPool)
    - Convolution
       - initial in_channels: 3
       - final out_channels: 128
@@ -24,9 +24,15 @@
 # 03. Loss Function, Optimizer, Scheduler
    - Loss Function: CrossEntropyLoss
    - Optimizer: Adam
-      - learning rate: 0.001
+      - learning rate: 0.01
       - betas: 0.9, 0.999
-      - weight decay: 0.0004
    - Scheduler: StepLR (multiply learning rate by gamma each step size)
-      - step size: 5
+      - step size: 10
       - gamma: 0.8
+
+
+# 04. Start Train
+   - Train Loss decreased rapidly, and Train Accuracy increased rapidly too.
+   - Initially, Validation Loss decreased rapidly, and Validation Accuracy increased rapidly.
+      - But at some point, performance of model with validation data was stagnant. (best accuracy: 0.54~)
+   - it was "Overfitting".
